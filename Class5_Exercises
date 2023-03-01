@@ -117,3 +117,24 @@ int main()
 }
 
 ============================================================================
+7) Read a temperature in degrees Fahrenheit for convert to degrees Celsius and show the result.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float fahrenheit, celsius = 0;
+    
+    printf("Insert a temperature in Fahrenheit degrees: ");
+    scanf("%f", &fahrenheit);
+    
+    celsius = (5.0 * ((fahrenheit - 32) / 9));
+    
+    printf("The converted temperature is: %1.2f", celsius);
+    
+    return 0;
+}
+
+============================================================================
+8) 
