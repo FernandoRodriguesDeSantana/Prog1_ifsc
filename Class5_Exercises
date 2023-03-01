@@ -177,7 +177,27 @@ int main()
 }
 
 ============================================================================
-10)
+10) Read a speed in km/h for convert to m/s and print the result.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float km_h, m_s = 0;
+
+    printf("Insert a speed in Km/h: ");
+    scanf("%f", &km_h);
+    
+    m_s = km_h / 3.6;
+    
+    printf("The converted speed is: %f m/s", m_s);
+    
+    return 0;
+}
+
+============================================================================
+11) 
 
 
 ============================================================================
