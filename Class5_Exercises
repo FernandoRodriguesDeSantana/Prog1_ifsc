@@ -1,0 +1,32 @@
+1) Build a code for get a integer number and print it.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{   
+    int number;
+    printf("Please, input a integer number: ");
+    scanf("%d", &number);
+    printf("The inputed number is: %d", number);
+    
+    return 0;
+}
+============================================================================
+2) Build a code for get a float number and print it.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{   
+    float number;
+    printf("Please, input a float number: ");
+    scanf("%f", &number);
+    printf("The inputed number is: %2.1f", number);
+    
+    return 0;
+}
+============================================================================
+3) Ask to the user for insert three integer numbers and print them sum.
+
