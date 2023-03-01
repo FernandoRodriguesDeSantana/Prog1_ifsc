@@ -197,7 +197,62 @@ int main()
 }
 
 ============================================================================
-11) 
+11) Read a speed in m/s for convert to km/h and print the result.
 
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float m_s, km_h = 0;
+    
+    printf("Insert a speed in m/s: ");
+    scanf("%f", &m_s);
+    
+    km_h = m_s * 3.6;
+    
+    printf("The converted speed is: %f km/h", km_h);
+    return 0;
+}
+
+============================================================================
+12) Read a angle in degrees for convert to radians and print the result.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float degrees, radians = 0;
+    
+    printf("Insert a angle in degrees: ");
+    scanf("%f", &degrees);
+    
+    radians = degrees * (3.14/180);
+    
+    printf("The converted angle is: %f radians", radians);
+    
+    return 0;
+}
+
+============================================================================
+13) Read a angle in radians for convert to degrees and print the result.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float degrees = 0, radians;
+    
+    printf("Insert a angle in radians: ");
+    scanf("%f", &radians);
+    
+    degrees = radians * (180/3.14);
+    
+    printf("The converted angle is: %f degrees", degrees);
+    
+    return 0;
+}
 
 ============================================================================
