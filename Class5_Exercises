@@ -1,3 +1,5 @@
+Archive link: https://bit.ly/41DTpPK
+
 1) Build a code for get a integer number and print it.
 
 #include <stdio.h>
@@ -12,6 +14,7 @@ int main()
     
     return 0;
 }
+
 ============================================================================
 2) Build a code for get a float number and print it.
 
@@ -27,6 +30,51 @@ int main()
     
     return 0;
 }
+
 ============================================================================
 3) Ask to the user for insert three integer numbers and print them sum.
 
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int number1, number2, number3, sum = 0;
+    
+    printf("Insert the first number: ");
+    scanf("%d", &number1);
+    
+    printf("Insert the second number: ");
+    scanf("%d", &number2);
+    
+    printf("Insert the third number: ");
+    scanf("%d", &number3); 
+    
+    sum = number1 + number2 + number3;
+    
+    printf("The sum of the inserted number is: %d", sum);
+    
+    return 0;
+}
+
+============================================================================
+4) Read a real number and print the result of square that number.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float number, square = 0;
+    
+    printf("Insert a real number: ");
+    scanf("%f", &number);
+    
+    square = pow(number,2);
+    
+    printf("The square of the inserted number is: %1.2f", square);
+    
+    return 0;
+}
+
+============================================================================
