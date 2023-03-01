@@ -78,3 +78,21 @@ int main()
 }
 
 ============================================================================
+5) Read a real number and print its fifth parth.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float number, division = 0;
+    
+    printf("Insert a real number: ");
+    scanf("%f", &number);
+    
+    division = number / 5;
+    
+    printf("The fifth part of your number is: %1.2f", division);
+    
+    return 0;
+}
