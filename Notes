@@ -1,0 +1,21 @@
+LER CARÁCTER: Pode-se ler um carácter utilizando as funções scanf("%c", &variavel), variavel = getchar(), variavel = getc(stdin) e variavel = fgetc(stdin)
+
+printf("Insira um carácter");
+scanf("%c", &variavel);
+
+ou
+
+variavel = getchar();
+
+ou
+
+variavel = getc(stdin);
+
+ou
+
+variavel = fgetc(stdin)
+
+Portanto, estas funções irão ler o que foi inserido no printf anterior à elas.
+
+*Observação: stdin significa "entrada padrão", a qual é o teclado. O "f" de fgetc significa "file".
+
