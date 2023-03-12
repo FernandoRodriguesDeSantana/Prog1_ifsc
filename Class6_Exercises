@@ -1,0 +1,392 @@
+Lista 02
+
+1) Faça um programa que receba dois números e mostre qual deles é o maior. 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+  
+
+int main() 
+
+{ 
+
+    float a, b; 
+
+     
+
+    printf("Insert the first number:"); 
+
+    scanf("%f", &a); 
+
+  
+
+    printf("Insert the second number:"); 
+
+    scanf("%f", &b); 
+
+     
+
+    if(a > b) 
+
+    { 
+
+        printf("The first number is largest than the second number"); 
+
+    } 
+
+     
+
+    else if(a == b) 
+
+    { 
+
+        printf("Both numbers are equal"); 
+
+    } 
+
+    else 
+
+    { 
+
+        printf("The second number is largest than the first number"); 
+
+    } 
+
+    return 0; 
+
+} 
+
+======================================================================================
+
+2) Leia um número fornecido pelo usuário. Se esse número for positivo, calcule a raiz quadrada do número. Se o número for negativo, mostre uma mensagem dizendo que o número e inválido. 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+  
+
+int main() 
+
+{ 
+
+    float a, root; 
+
+     
+
+    printf("Insert a positive number:"); 
+
+    scanf("%f", &a); 
+
+     
+
+    if(a >= 1) 
+
+    { 
+
+        root = sqrt(a); 
+
+        printf("The square root of this number is: %2.2f", root); 
+
+    } 
+
+    else 
+
+    { 
+
+        printf("The inserted number is not valid.");     
+
+    } 
+
+     
+
+    return 0; 
+
+} 
+ 
+======================================================================================
+
+3)Faça um programa que receba um número inteiro e verifique se este número é par ou ímpar 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+  
+
+int main() 
+
+{ 
+
+    int a, even; 
+
+     
+
+    printf("Insert a number:"); 
+
+    scanf("%d", &a); 
+
+     
+
+    even = a % 2; 
+
+    if(even == 0) 
+
+    { 
+
+        printf("The inserted number is even"); 
+
+    } 
+
+    else 
+
+    { 
+
+        printf("The inserted number is odd"); 
+
+    } 
+
+    return 0; 
+
+} 
+
+====================================================================================== 
+4)Leia o salário de um trabalhador e o valor da prestação de um empréstimo. Se a prestação for maior que 20% do salário imprima: “Empréstimo não concedido”, caso contrário imprima: “Empréstimo concedido”. 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+  
+
+int main() 
+
+{ 
+
+    float salary, installment, percentage, loan; 
+
+     
+
+    printf("Insert your salary: "); 
+
+    scanf("%f", &salary); 
+
+  
+
+    printf("Insert the loan value: "); 
+
+    scanf("%f", &loan); 
+
+     
+
+    percentage = salary * (0.2); 
+
+     
+
+    printf("The 20 percent of your salary is worth: %6.2f", percentage); 
+
+     
+
+    if(loan > percentage) 
+
+    { 
+
+        printf("\nThe money loan will not be granted"); 
+
+    } 
+
+     
+
+    else 
+
+    { 
+
+        printf("\nThe money loan will be granted"); 
+
+    } 
+
+     
+
+    return 0; 
+
+} 
+
+====================================================================================== 
+
+5) Faça um programa que receba a alturae o sexo de uma pessoa e calcule e mostre seu peso ideal, utilizando as seguintes fórmulas (onde h corresponde à altura) 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+
+
+int main() 
+
+{ 
+
+    float weight = 0, gender, height; 
+
+     
+
+    printf("Insert your gender: 1 for Male and 2 for Female: "); 
+
+    scanf("%f", &gender); 
+
+     
+
+    printf("Insert your height: "); 
+
+    scanf("%f", &height); 
+
+     
+
+    if(gender == 1) 
+
+    { 
+
+        weight = ((72.7 * height) - 58); 
+
+        printf("Your ideal weight is: %f", weight); 
+
+    } 
+
+    else if(gender == 2) 
+
+    { 
+
+        weight  = ((62.1 * height) - 44.7); 
+
+        printf("Your ideal weight is: %f", weight); 
+
+    } 
+
+    else 
+
+    { 
+
+        printf("Something is wrong! Try again."); 
+
+    } 
+
+     
+
+    return 0; 
+
+} 
+
+ 
+
+2ª Tentativa (mais melhor): 
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+  
+
+int main() 
+
+{ 
+
+    char gender; 
+
+    float height, weight = 0; 
+
+     
+
+    printf("Insert your gender: 'M' for male and 'F' for female: "); 
+
+    scanf("%c", &gender); 
+
+     
+
+    printf("Insert yout height in meters (x.y): "); 
+
+    scanf("%f", &height); 
+
+     
+
+    if(gender == 'm' || gender == 'M') 
+
+    { 
+
+        weight = ((72.7 * height) - 58); 
+
+        printf("Your ideal weight is: %f", weight); 
+
+    } 
+
+     
+
+    else if(gender == 'f' || gender == 'F') 
+
+    { 
+
+        weight = ((62.1 * height) - 44.7); 
+
+        printf("Your ideal weight is: %f", weight); 
+
+    } 
+
+     
+
+    return 0; 
+
+     
+
+} 
+
+======================================================================================
+
+ 6)Escreva um programa que leia um número inteiro maior do que zero e devolva, na tela, asoma de todos os seus algarismos. Por exemplo, ao número 251 corresponder ao valor 
+ 8 (2 + 5 + 1). Se o número lido não for maior do que zero, o programa terminar a com a mensagem “Número inválido”
+ 
+ 
+ 
+ ======================================================================================
+ 
+ 7)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   float p1, p2, p3, a,b, nota = 0;
+
+    printf("Insira o primeiro peso: ");
+    scanf("%f", &a);
+
+    printf("Insira o segundo peso: ");
+    scanf("%f", &b);
+
+    printf("Insira a nota da primeira prova: ");
+    scanf("%f", &p1);
+
+    printf("Insira a nota da segunda prova: ");
+    scanf("%f", &p2);
+
+    printf("Insira a nota da terceira prova: ");
+    scanf("%f", &p3);
+
+    nota = ((a*p1)+(a*p2)+(b*p3)) / 3;
+
+    printf("A media ponderada do aluno vale: %f", nota);
+
+    if (nota >= 6.0){
+        printf("O aluno está aprovado");
+    }
+    else{
+        printf("O aluno está reprovado");
+    }
+
+    return 0;
+}
+
+======================================================================================
+
+
+
+ 
