@@ -428,4 +428,40 @@ int main()
 
 10)
 
- 
+ #include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a, b, c;
+    float result;
+
+    printf("Enter two numbers. After, input which operation do you want make: 1(+), 2 (-), 3 (/) and 4(X)");
+    scanf("%d%d%d", &a, &b, &c);
+
+    switch(c)
+    {
+        case 1:
+            result = a + b;
+            printf("%.2f", result);
+        break;
+
+        case 2:
+            result = a - b;
+            printf("%.2f", result);
+        break;
+
+        case 3:
+            result = a / b;
+            printf("%.2f", result);
+        break;
+
+        case 4:
+            result = a * b;
+            printf("%.2f", result);
+        break;
+    }
+
+    return 0;
+}
+
