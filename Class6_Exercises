@@ -465,3 +465,36 @@ int main()
     return 0;
 }
 
+=================================================================================
+11)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int a, resto1, resto2;
+
+    printf("Enter a integer number: ");
+    scanf("%d", &a);
+
+    resto1 = a % 3;
+    resto2 = a % 5;
+
+    if(resto1 == 0){
+        printf("The number is divisible by 3");
+    }
+
+    else if (resto2 == 0){
+        printf("The number is divisible by 5");
+    }
+
+    else if (resto1 == 0 || resto2 == 0){
+        printf("The inserted number can't be divisible by 3 and by 5 at the same time.");
+    }
+
+    else{
+        printf("The number is divisible by another number");
+    }
+    return 0;
+}
