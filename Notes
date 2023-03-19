@@ -41,7 +41,11 @@ Código para o printf exibir acentos e tudo mais. Como se fosse permitido o idio
     
     int main()
     {
-        setlocale(LC_ALL, "portuguese");
+        
+         setlocale(LC_ALL, "Portuguese");
+
+         printf("Digite um número: ");
+         scanf("%d", &a);
         
         return 0;
     }
