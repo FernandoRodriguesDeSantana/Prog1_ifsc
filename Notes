@@ -52,4 +52,25 @@ Código para o printf exibir acentos e tudo mais. Como se fosse permitido o idio
     
     =================================================================================================================================================================
     
+    Operador ternário
     
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    int a;
+
+    setlocale(LC_ALL, "portuguese");
+
+    printf("Digite um número: ");
+    scanf("%d", &a);
+    
+    // USO DO OPERADOR TERNÁRIO PARA ESTRUTURA DE DECISÕES
+    a > 0 ? printf("Sim\n") : printf("Não\n");
+
+    printf("Hello world!\n");
+    return 0;
+}
+
