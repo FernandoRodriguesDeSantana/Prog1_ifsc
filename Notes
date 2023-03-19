@@ -68,8 +68,14 @@ int main()
     scanf("%d", &a);
     
     // USO DO OPERADOR TERNÁRIO PARA ESTRUTURA DE DECISÕES
+    // CONDIÇÃO ? SE VERDADEIRO : SE FALSO
+    
     a > 0 ? printf("Sim\n") : printf("Não\n");
-
+    
+    // É POSSÍVEL TAMBÉM REALIZAR ANINHAMENTO COM OPERADOR TERNÁRIO
+    // CONDIÇÃO ? SE VERDADEIRO : CONDIÇÃO ? SE VERDADEIRO : SE FALSO;
+    a > 0 ? printf("Positivo\n") : a < 0 ? printf("Negativo\n") : printf("Nulo\n");
+    
     printf("Hello world!\n");
     return 0;
 }
