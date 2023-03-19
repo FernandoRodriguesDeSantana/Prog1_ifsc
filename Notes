@@ -80,3 +80,38 @@ int main()
     return 0;
 }
 
+============================================================================================================
+
+USANDO SWITCH CASE COM O CASO "DEFAULT"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    int opcao;
+
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("1: Cadastrar\n2: Pesquisar\n3: Remover\n");
+    scanf("%d", &opcao);
+
+    switch(opcao){
+    case 1:
+        printf("Cadastrando...\n");
+        break;
+    case 2:
+        printf("Pesquisando...\n");
+        break;
+    case 3:
+        printf("Removendo...");
+        break;
+    // O "default" IRÁ SERVIR PARA OPÇÕES QUE ESTÃO FORA DO ESCOPO, OU SEJA, QUE NÃO SEJAM 1, 2 OU 3
+    default:
+        printf("Opção Inválida...");
+    }
+    return 0;
+}
+
+
