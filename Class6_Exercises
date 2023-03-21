@@ -498,3 +498,44 @@ int main()
     }
     return 0;
 }
+
+===========================================================================================
+12)
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    int a,b,c, sum1 = 0, sum2 = 0, sum3 = 0;
+
+    printf("Enter three values: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    sum1 = a + b;
+    sum2 = a + c;
+    sum3 = b + c;
+
+    if(c < sum1 && b < sum2 && a < sum3){
+        if (a == b && b == c){
+            printf("\nIt's a equilateral triangle.");
+        }
+        else if (a == b || a == c || b == c){
+            printf("\nIt's a isosceles triangle.");
+        }
+        else if (a != b && b != c && a != c){
+            printf("\nIt's a scalene triangle.");
+        }
+        else{
+            printf("Something is wrong! Try it again...");
+        }
+    }
+    else{
+        printf("Isn't a triangle.");
+    }
+
+
+    return 0;
+}
+
+=================================================================================
