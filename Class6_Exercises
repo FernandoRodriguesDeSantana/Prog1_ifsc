@@ -538,4 +538,46 @@ int main()
     return 0;
 }
 
-=================================================================================
+============================================================================================
+13)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+int main()
+{
+    int i = 0, a, b, sum1 = 0, sum2 = 0, p = 0, score = 0;
+
+    srand(time(NULL)); // necessary to always sort different numbers
+
+    do{
+        printf("\nThe first number is %d and the second number is %d.", rand() %100, rand() %100);
+
+        printf("\nFor start the game enter the first and the second number: ");
+        scanf("%d%d", &a, &b);
+
+        sum1 = a + b;
+
+        printf("\nHow much is the sum of these numbers?");
+        scanf("%d", &sum2);
+
+        if (sum1 == sum2){
+            p = p + 1;
+            printf("Great!");
+
+        }
+        else{
+            printf("Wrowng! Try it again...");
+        }
+        i++;
+    }while(i < 5);
+
+    printf("\nYour score is %d.", p);
+
+    return 0;
+}
+
+===================================================================================
+
+
