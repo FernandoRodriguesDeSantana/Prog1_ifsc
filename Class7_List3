@@ -1,0 +1,36 @@
+1) Faça um programa que determine e mostre os cinco primeiros múltiplos de 3, considerando números maiores que 0
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, i;
+
+    for(i = 1; i <= 5; i++)
+    {
+        a = 3 * i;
+        printf("\n%d", a);
+    }
+}
+=========================================================================================================================================================================
+2) Faça um programa utilizando o comando while que mostra uma contagem regressiva na tela, iniciando em 10 e terminando em 0. Mostrar uma mensagem “FIM!” após a contagem
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    int i, a = 11;
+
+    do
+    {
+        a--;
+        printf("\n%d", a);
+
+    } while(a > 0);
+
+        printf("\nFim");
+        return 0;
+}
+=========================================================================================================================================================================
+3) 
