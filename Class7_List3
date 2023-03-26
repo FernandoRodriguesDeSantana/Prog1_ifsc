@@ -33,4 +33,58 @@ int main()
         return 0;
 }
 =========================================================================================================================================================================
-3) 
+4) Faça um programa que peça ao usuário para digitar 10 valores e some-os.
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    int i, a, soma = 0;
+
+    do
+    {
+        printf("Enter a number: \n");
+        scanf("%d", &a);
+        soma = soma + a;
+        i++;
+
+    } while(i < 10);
+
+    printf("\n%d", soma);
+    return 0;
+}
+=========================================================================================================================================================================
+5) Escreva um programa que leia 10 números e escreva o menor valor lido e o maior valor lido.
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    int i = 0, a, maior, menor;
+
+    while(i < 10)
+    {
+        printf("Enter a number: \n");
+        scanf("%d", &a);
+        i++;
+
+        if(i == 0)
+        {
+            maior = a;
+            menor = a;
+        }
+        else if(a > maior)
+        {
+            maior = a;
+        }
+        else if(a < menor)
+        {
+            menor = a;
+        }
+    }
+    printf("Maior: %d", maior);
+    printf("\nMenor: %d", menor);
+
+    return 0;
+}
+=========================================================================================================================================================================
