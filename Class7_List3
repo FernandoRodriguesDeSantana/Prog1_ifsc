@@ -111,3 +111,30 @@ int main()
 
     return 0;
 }
+
+=========================================================================================================================================================================
+7) Faça um programa que calcule e mostre a soma dos 50 primeiros números pares.
+#include <stdio.h>
+
+int main()
+{
+    int a = 0, i, num = 0;
+
+    // Forma fixa
+    for(i = 0; i < 50; i++)
+    {
+        a = a + i;
+    }
+
+    printf("%d", a);
+
+    // se o usuario insere um valor para soma:
+    printf("\nEnter a integer number: ");
+    scanf("%d", &a);
+
+    num = a*(a+1) / 2;
+
+    printf("\nA soma dos numeros naturais ate %d vale: %d", a, num);
+
+    return 0;
+}
