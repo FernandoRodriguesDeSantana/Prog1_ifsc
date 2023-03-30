@@ -215,3 +215,57 @@ int main()
     return 0;
 }
 =========================================================================================================================================================================
+12)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+  int a = 0, b = 0, sum = 0, mult = 0, i, resto, maior, menor;
+
+  printf("Enter two numbers: ");
+  scanf("%d%d", &a, &b);
+
+  resto  = i % 2;
+
+  if (a > b)
+  {
+    if (resto == 0)
+    {
+      for(i = b; i <= a; i++)
+        {
+          sum = sum + i;
+        }
+    }
+    else if(resto != 0)
+    {
+      for(i = b; i <= a; i++)
+        {
+          mult = mult * i;
+        }
+    }
+  printf("\nBetween the numbers %d and %d the sum is %d and the mult is %d.", a, b, sum, mult);
+  }
+
+  else if (a < b)
+  {
+    if(resto == 0)
+    {
+      for(i = a; i <= b; i++)
+        {
+          sum = sum + i;
+        }
+    }
+    else if(resto != 0)
+    {
+      for (i = a; i <= b; i++)
+        {
+          mult = mult * i;
+        }
+    }
+  printf("\nBetween the numbers %d and %d the sum is %d and the mult is %d.", a, b, sum, mult);
+  }
+
+  return 0;
+}
