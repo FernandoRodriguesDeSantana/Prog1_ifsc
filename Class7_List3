@@ -215,57 +215,50 @@ int main()
     return 0;
 }
 =========================================================================================================================================================================
-12)
-#include <stdio.h>
+12) Faça um programa que receba dois números. Calcule e mostre:
+     A soma dos números pares desse intervalo de números, incluindo os números
+    digitados;
+     A multiplicação dos números ımpares desse intervalo, incluindo os digitados;
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 int main()
 {
-  int a = 0, b = 0, sum = 0, mult = 0, i, resto, maior, menor;
+    float a,b,resto = 0, sum = 0, mult = 1;
+    int i;
 
-  printf("Enter two numbers: ");
-  scanf("%d%d", &a, &b);
+    printf("Enter two numbers: ");
+    scanf("%f%f", &a, &b);
 
-  resto  = i % 2;
-
-  if (a > b)
-  {
-    if (resto == 0)
-    {
-      for(i = b; i <= a; i++)
-        {
-          sum = sum + i;
+    if(a < b){
+        for(i = a; i <= b; i++){
+            if((i % 2) == 0){
+                sum += i;
+            }
+            else{
+                mult *= i;
+            }
         }
+        printf("\nNumbers: %2.1f and %2.1f", a,b);
+        printf("\nSum: %.3f", sum);
+        printf("\nMult: %.3f", mult);
     }
-    else if(resto != 0)
-    {
-      for(i = b; i <= a; i++)
-        {
-          mult = mult * i;
-        }
-    }
-  printf("\nBetween the numbers %d and %d the sum is %d and the mult is %d.", a, b, sum, mult);
-  }
 
-  else if (a < b)
-  {
-    if(resto == 0)
-    {
-      for(i = a; i <= b; i++)
-        {
-          sum = sum + i;
+    else{
+        for(i = b; i <= a; i++){
+            if((i % 2) == 0){
+                sum += i;
+            }
+            else{
+                mult *= i;
+            }
         }
+        printf("\nNumbers: %.1f and %.1f", a,b);
+        printf("\nSum: %.3f", sum);
+        printf("\nMult: %.3f", mult);
     }
-    else if(resto != 0)
-    {
-      for (i = a; i <= b; i++)
-        {
-          mult = mult * i;
-        }
-    }
-  printf("\nBetween the numbers %d and %d the sum is %d and the mult is %d.", a, b, sum, mult);
-  }
 
-  return 0;
+    return 0;
 }
+=========================================================================================================================================================================
