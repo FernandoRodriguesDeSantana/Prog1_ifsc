@@ -262,3 +262,68 @@ int main()
     return 0;
 }
 =========================================================================================================================================================================
+/*Escreva um programa que receba como entrada o valor do saque realizado pelo cliente
+de um banco e retorne quantas notas de cada valor serão necessárias para atender ao
+saque com a menor quantidade de notas possível. Serão utilizadas notas de 100, 50, 20,
+10, 5, 2 e 1 real.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int value, banknote[7] = {1,2,5,10,20,50,100},  n=0, nil = 0;
+    //int a = 1, b = 2, c = 5, d = 10, e = 20, f = 50, g = 100;
+    printf("How much money do you want? ");
+    scanf("%d", &value);
+
+    switch (value) {
+        case 1:
+            printf("\nPrinting a 1 real banknote");
+            break;
+        case 2:
+            printf("\nPrinting a 2 real banknote");
+            break;
+        case 5:
+            printf("\nPrinting a 5 real banknote");
+            break;
+        case 10:
+            printf("\nPrinting a 10 real banknote");
+            break;
+        case 20:
+            printf("\nPrinting a 20 real banknote");
+            break;
+        case 50:
+            printf("\nPrinting a 50 real banknote");
+            break;
+        case 100:
+            printf("\nPrinting a 100 real banknote");
+            break;
+        default:
+            do{
+                if(value >= 2 && value <= 5){
+                    n = n + banknote[1];
+                    printf("\n%d", banknote[1]);
+                    nil = value - n;
+                }
+                else if(value >= 5 && value <= 10){
+                    n = n + banknote[3];
+                    printf("\n%d", banknote[3]);
+                    nil = value - n;
+                }
+                else if(value >= 10 && value <= 20){
+                    n = n + banknote[4];
+                    printf("\n%d", banknote[4]);
+                    nil = value - n;
+                }
+
+            } while(nil != 0);
+
+
+            break;
+    }
+
+    return 0;
+
+}
