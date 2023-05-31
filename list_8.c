@@ -33,5 +33,5 @@ int main()
     printf("\nPerson adress: %s", informations.adress);
 
     return 0;
-
+//a
 }
