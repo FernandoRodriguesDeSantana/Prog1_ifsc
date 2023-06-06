@@ -1,8 +1,8 @@
+//1)Implemente um programa que leia o nome, a idade e o endereço de uma pessoa e
+//armazene os dados em uma estrutura. Exiba os dados armazenados ao final.
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-// Implemente um programa que leia o nome, a idade e o endereço de uma pessoa e
-//armazene os dados em uma estrutura. Exiba os dados armazenados ao final.
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
 
 //======================================================================================================================================
 
-//Construa uma estrutura aluno com nome, número de matrıcula e curso. Leia do usuário a 
+//2) Construa uma estrutura aluno com nome, número de matrıcula e curso. Leia do usuário a 
 //informação de 5 alunos, armazene em vetor dessa estrutura e imprima os dados na tela
 
 #include <stdio.h>
@@ -79,3 +79,6 @@ int main(){
 	}
 	return 0;
 }
+
+//======================================================================================================================================
+
