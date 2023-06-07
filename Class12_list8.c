@@ -171,6 +171,7 @@ finais (use uma média ponderada: Nota1 com peso=1.0 e Nota2 com peso=2.0).
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <math.h>
 
 struct student{
     long long int registration;
@@ -180,8 +181,7 @@ struct student{
 };
 
 int main(){
-    int i, n, p1 = 1, p2 = 2, option = 0;
-    float average;
+    int i, n, option = 0;
     printf("How many students are enrolled in the class? Enter: ");
     scanf("%d", &n);
     fflush(stdin);
@@ -209,26 +209,27 @@ int main(){
         scanf("%f", &info[i].grade2);
         fflush(stdin);
 
-        info[i].average = (((p1*info[i].grade1) + (p2*info[i].grade2)) / p1 + p2);
+        info[i].average = (((1*info[i].grade1) + (2*info[i].grade2)) / 3);
 
         printf("\nThe informations about the student number %d was saved!\n", i+1);
 
         printf("\n\n");
     }
-    
+
     printf("\nDo you want display the stored informations? 1.Yes and 2.No: ");
     scanf("%d", &option);
-    
+
     if(option == 1){
         for(i = 0; i < n; i++){
             printf("\n-----------Informations about the student number %d-----------", i+1);
             printf("\nName: %s", info[i].name);
             printf("\nRegistration: %ldd", info[i].registration);
             printf("\nCourse code: %d", info[i].code);
-            printf("\nGrade 1 = %.2f; Grade 2 = %.2f; Weight 1: %d; Weight 2: %d; Average: %.2f", info[i].grade1, info[i].grade2, p1, p2, average);
+            printf("\nGrade 1 = %.2f; Grade 2 = %.2f; Average: %.2f", info[i].grade1, info[i].grade2, info[i].average);
         }
     }
 
     return 0;
 }
+
 
