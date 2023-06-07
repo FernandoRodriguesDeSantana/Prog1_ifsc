@@ -161,4 +161,74 @@ int main(){
 }
 
 //======================================================================================================================================
+/*4) Faça um programa que realize a leitura dos seguintes dados relativos a um conjunto de
+alunos: Matricula, Nome, Código da Disciplina, Nota1 e Nota2. Considere uma turma de ´
+até 10 alunos. Após ler todos os dados digitados, e depois de armazena-los em um vetor
+de estrutura, exibir na tela a listagem final dos alunos com as suas respectivas medias
+finais (use uma média ponderada: Nota1 com peso=1.0 e Nota2 com peso=2.0).
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+struct student{
+    long long int registration;
+    char name [50];
+    int code;
+    float grade1, grade2, average;
+};
+
+int main(){
+    int i, n, p1 = 1, p2 = 2, option = 0;
+    float average;
+    printf("How many students are enrolled in the class? Enter: ");
+    scanf("%d", &n);
+    fflush(stdin);
+
+    struct student info[n];
+
+    for(i = 0; i < n; i++){
+        printf("\n-----------Student number %d-----------", i+1);
+        printf("\nEnter the registration number: ");
+        scanf("%lld", &info[i].registration);
+        fflush(stdin);
+
+        printf("\nEnter the student name: ");
+        gets(info[i].name);
+        fflush(stdin);
+
+        printf("\nEnter the course code: ");
+        scanf("%d", &info[i].code);
+
+        printf("\nEnter the first grade: ");
+        scanf("%f", &info[i].grade1);
+        fflush(stdin);
+
+        printf("\nEnter the second grade: ");
+        scanf("%f", &info[i].grade2);
+        fflush(stdin);
+
+        info[i].average = (((p1*info[i].grade1) + (p2*info[i].grade2)) / p1 + p2);
+
+        printf("\nThe informations about the student number %d was saved!\n", i+1);
+
+        printf("\n\n");
+    }
+    
+    printf("\nDo you want display the stored informations? 1.Yes and 2.No: ");
+    scanf("%d", &option);
+    
+    if(option == 1){
+        for(i = 0; i < n; i++){
+            printf("\n-----------Informations about the student number %d-----------", i+1);
+            printf("\nName: %s", info[i].name);
+            printf("\nRegistration: %ldd", info[i].registration);
+            printf("\nCourse code: %d", info[i].code);
+            printf("\nGrade 1 = %.2f; Grade 2 = %.2f; Weight 1: %d; Weight 2: %d; Average: %.2f", info[i].grade1, info[i].grade2, p1, p2, average);
+        }
+    }
+
+    return 0;
+}
 
