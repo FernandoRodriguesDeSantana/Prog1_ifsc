@@ -254,7 +254,7 @@ struct worker{
 
 int main(){
     struct worker info;
-
+    int option = 0;
     printf("Enter the worker name: ");
     gets(info.name);
     fflush(stdin);
@@ -272,13 +272,66 @@ int main(){
     fflush(stdin);
 
     printf("\nEnter the day, month and year of the worker birthday: ");
-    scanf("%d%d%d", &info.day, info.month, info.year);
+    scanf("%d%d%d", &info.day, &info.month, &info.year);
+    fflush(stdin);
+
+    printf("\nEnter the sector code of the worker: ");
+    scanf("%d", &info.code);
+    fflush(stdin);
+
+    printf("\nEnter the worker job: ");
+    gets(info.job);
     fflush(stdin);
 
     printf("\nEnter the worker salary ($): ");
     scanf("%f", &info.salary);
     fflush(stdin);
 
+    printf("\n-------------The informations about the worker %s was saved.-------------\n", info.name);
+
+    printf("\nDo you want print the informations about %s? 1.Yes or 2.No: ", info.name);
+    scanf("%d", &option);
+    fflush(stdin);
+
+    if(option == 1){
+        printf("\n-------------Printing....-------------\n");
+        printf("\nName: %s", info.name);
+        printf("\nAge: %d", info.age);
+        if(info.sex == 1){
+            printf("\nSexo: Masculine");
+        }
+        else{
+            printf("\nSexo: Feminine");
+        }
+        printf("\nCPF: %d", info.cpf);
+        printf("\nBirthday: %d / %d / %d", info.day, info.month, info.year);
+        printf("\nSector code: %d", info.code);
+        printf("\nJob: %s", info.job);
+        printf("\nSalary: %f", info.salary);
+        printf("\n");
+    }
+
     return 0;
+}
+
+//======================================================================================================================================
+
+/*6) Utilizando uma estrutura, faça um programa que permita a entrada de nome, endereço e
+telefone de 5 pessoas e os imprima em ordem alfabética.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+struct person{
+    char name[50];
+    char adress[100];
+    int phone;
+};
+
+int main(){
+    struct person info;
+    
+    
 }
 
