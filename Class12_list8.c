@@ -232,4 +232,53 @@ int main(){
     return 0;
 }
 
+//======================================================================================================================================
+
+/*5) Faça um programa que armazene em um registro de dados (estrutura composta) os dados
+de um funcionário de uma empresa, compostos de: Nome, Idade, Sexo (M/F), CPF, Data
+de Nascimento, Código do Setor onde trabalha (0-99), Cargo que ocupa (string de até 30
+caracteres) e salario. Os dados devem ser digitados pelo usuário, armazenados na
+estrutura e exibidos na tela.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+
+struct worker{
+    char name[50], job[30];
+    int age, sex, cpf, day, month, year, code;
+    float salary;
+};
+
+int main(){
+    struct worker info;
+
+    printf("Enter the worker name: ");
+    gets(info.name);
+    fflush(stdin);
+
+    printf("\nEnter the worker age: ");
+    scanf("%d", &info.age);
+    fflush(stdin);
+
+    printf("\nEnter the worker sex (1.Masculine and 2.Feminine): ");
+    scanf("%d", &info.sex);
+    fflush(stdin);
+
+    printf("\nEnter the worker cpf: ");
+    scanf("%d", &info.cpf);
+    fflush(stdin);
+
+    printf("\nEnter the day, month and year of the worker birthday: ");
+    scanf("%d%d%d", &info.day, info.month, info.year);
+    fflush(stdin);
+
+    printf("\nEnter the worker salary ($): ");
+    scanf("%f", &info.salary);
+    fflush(stdin);
+
+    return 0;
+}
 
