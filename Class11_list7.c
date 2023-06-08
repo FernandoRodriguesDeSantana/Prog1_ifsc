@@ -80,3 +80,42 @@ int main(){
 }
 
 // ===============================================================================================================
+/*14) Faça uma função que receba uma matriz de 3 x 3 elementos. Calcule a soma dos
+elementos que estão acima da diagonal principal*/
+
+int sum(int matrix[3][3]){
+	int i, j, soma = 0;
+
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			if(j > i){
+				soma = soma + matrix[i][j];
+			}
+		} 
+	}
+	return soma;
+};
+
+int main(){
+	int y, i, j, matrix[3][3];
+
+	for(i = 0; i < 3; i++){
+		printf("\nInsira os valores das 3 colunas referentes a linha %d: ", i);
+		for(j = 0; j < 3; j++){
+			scanf("%d", &matrix[i][j]);
+		}
+	}
+	/*
+	for(i = 0; i < 3; i++){
+		printf("\n");
+		for(j = 0; j < 3; j++){
+			printf("%d", matrix[i][j]);
+		}
+	}
+	*/
+
+	y = sum(matrix);
+	printf("%d", y);
+
+	return 0;
+}
