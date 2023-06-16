@@ -223,4 +223,31 @@ int main(){
 }
 =================================================================================================================================================================
 /*8.Crie um programa que contenha um array de float contendo 10 elementos. Imprima o endereco de cada posicao desse array*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int i, j[10];
+    int *x[10];
+    
+    for(i = 0; i < 10; i++){
+        printf("\nEnter the value for the position %d: ", i+1);
+        scanf("%d", &j[i]);
+        x[i] = &j[i];
+    }
+    
+    printf("The inputed array is: {");
+    for(i = 0; i < 10; i++){
+        printf(" %d ", j[i]);
+    }
+    printf("}");
+    
+    printf("\nThe array elements adresses are: {");
+    for(i = 0; i < 10; i++){
+    printf(" %x ", x[i]);
+    }
+    printf("}");
+    
+    return 0;
+}
 
