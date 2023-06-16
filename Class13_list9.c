@@ -61,4 +61,26 @@ int main(){
 }
 
 =================================================================================================================================================================
-  
+//2. Escreva um programa que contenha duas variaveis inteiras. Compare seus enderecos e exiba o maior endereco.
+#include <stdio.h.>
+#include <stdlib.h>
+
+int main(){
+    int a = 10, b = 20;
+    int *c, *d;
+
+    c = &a;
+    d = &b;
+
+    printf("\nVariable 'a = %d' adress: %x.\nVariable 'b = %d' adress: %x.\n", *c, c, *d, d);
+
+    if(c > d){
+        printf("\nThe 'a' adress it's the largest.");
+    }
+    else{
+        printf("\nThe 'b' adress it's the largest.");
+    }
+    return 0;
+}
+=================================================================================================================================================================
+	
