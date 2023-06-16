@@ -194,6 +194,33 @@ int main(){
 =================================================================================================================================================================
 /*7.Crie um programa que contenha uma funcao que permita passar por parametro dois numeros inteiros A e B. A funcao devera calcular a soma entre estes dois numeros e
 armazenar o resultado na variavel A. Esta funcao nao devera possuir retorno, mas devera modificar o valor do primeiro parametro. Imprima os valores de A e B na funcao principal. */
+#include <stdio.h>
+#include <stdlib.h>
 
+int get_num(int x, int y){
+    scanf("%d%d", &x, &y);
+    printf("\nThe first integer parametrer is %d and the second is %d", x, y);
+    printf("\n  >Calculating the sum between %d and %d...", x,y);
+    int sum = 0;
+    int *z;
+    z = &x;
+    
+    sum = x + y;
+    
+    *z = sum;
 
+    printf("\n  >After sum operation the first integer parametrer is %d and the second is %d", *z, y);
+    
+}
+
+int main(){
+    int i = 0, j = 0;
+    
+    printf("\nEnter two integer numbers: ");
+    get_num(i,j);
+    
+    return 0;
+}
+=================================================================================================================================================================
+/*8.Crie um programa que contenha um array de float contendo 10 elementos. Imprima o endereco de cada posicao desse array*/
 
