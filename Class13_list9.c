@@ -161,6 +161,40 @@ int main(){
 =================================================================================================================================================================
 /*6.Elaborar um programa que leia dois valores inteiros (A e B). Em seguida faca uma funcao que retorne a soma do dobro dos dois numeros lidos. 
 A funcao devera armazenar o dobro de A na propria variavel A e o dobro de B na propria variavel B. */
+#include <stdio.h>
+#include <stdlib.h>
+
+int sum_two(int *x, int *y){
+    int x_two = 0, y_two = 0, sum = 0;
+    x_two = (*x) * 2;
+    y_two = (*y) * 2;
+    sum = x_two + y_two;
+
+    printf("\n   >Calculating the double of %d and %d...\n", *x, *y);
+    printf("\n   >The double of %d is %d and the double of %d is %d\n", *x, x_two, *y, y_two);
+    printf("\n   >The sum between the %d and %d is %d\n", x_two, y_two, sum);
+}
+
+int main(){
+    int a = 0, b = 0;
+    int *x;
+    int *y;
+
+    printf("\nEnter two integer values: ");
+    scanf("%d%d", &a,&b);
+
+    x = &a;
+    y = &b;
+
+    sum_two(x,y);
+
+    return 0;
+}
 	
+=================================================================================================================================================================
+/*7. . Crie um programa que contenha uma funcao que permita passar por parametro dois numeros inteiros A e B. A funcao devera calcular a soma entre estes dois numeros e
+armazenar o resultado na variavel A. Esta funcao nao devera possuir retorno, mas devera modificar o valor do primeiro parametro.
+Imprima os valores de A e B na funcao principal. */
+
 
 
