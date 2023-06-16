@@ -31,7 +31,7 @@ int main(){
 	scanf("%d", &option);
 
 	if(option == 1){
-		printf("\nDo you want change which value? \n(1)a\n(2)b\n(3)c\n >Enter your option: ");
+		printf("\nWhich value do you want change? \n(1)a\n(2)b\n(3)c\n >Enter your option: ");
 		scanf("%d", &option2);
 
 		if(option2 == 1){
