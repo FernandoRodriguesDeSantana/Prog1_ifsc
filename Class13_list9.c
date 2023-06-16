@@ -83,4 +83,37 @@ int main(){
     return 0;
 }
 =================================================================================================================================================================
+/*Faca um programa que leia 2 valores inteiros e chame uma funcao que receba estas 2 variaveis e troque o seu conteudo, ou seja, esta funcao e chamada passando duas ´
+variaveis A e B por exemplo e, apos a execucao da funcao, A contera o valor de B e B tera o valor de A. */	
+#include <stdio.h>
+#include <stdlib.h>
+
+int change(int *x, int *y){
+    int z = 0, w = 0;
+    printf("\nFROM INSERTED VALUES: \n\n  >First adress: %x \n  >Second adress: %x\n", x,y);
+    printf("\nSwitching values...\n");
+    z = y;
+    w = x;
+    x = z;
+    y = w;
+
+    printf("\nNEW ADRESSES: \n\n  >First adress: %x \n  >Second adress: %x\n", x,y);
+}
+
+int main(){
+    int a = 0, b = 0;
+    int *x;
+    int *y;
+
+    printf("\nEnter two different integer values: ");
+    scanf("%d%d", &a,&b);
+
+    x = &a;
+    y = &b;
+
+    change(x,y);
+
+    return 0;
+}
+
 	
