@@ -61,7 +61,7 @@ int main(){
 }
 
 =================================================================================================================================================================
-//2. Escreva um programa que contenha duas variaveis inteiras. Compare seus enderecos e exiba o maior endereco.
+//2 e 3. Escreva um programa que contenha duas variaveis inteiras. Compare seus enderecos e exiba o maior endereco.
 #include <stdio.h.>
 #include <stdlib.h>
 
@@ -83,7 +83,7 @@ int main(){
     return 0;
 }
 =================================================================================================================================================================
-/*Faca um programa que leia 2 valores inteiros e chame uma funcao que receba estas 2 variaveis e troque o seu conteudo, ou seja, esta funcao e chamada passando duas ´
+/*4. Faca um programa que leia 2 valores inteiros e chame uma funcao que receba estas 2 variaveis e troque o seu conteudo, ou seja, esta funcao e chamada passando duas ´
 variaveis A e B por exemplo e, apos a execucao da funcao, A contera o valor de B e B tera o valor de A. */	
 #include <stdio.h>
 #include <stdlib.h>
@@ -116,4 +116,51 @@ int main(){
     return 0;
 }
 
+=================================================================================================================================================================
+/*5. Faca um programa que leia dois valores inteiros e chame uma funcao que receba estes 2 valores de entrada e retorne o maior valor na primeira variavel e o menor valor na
+segunda variavel. Escreva o conteudo das 2 variaveis na tela.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int m_size(int *x, int *y){
+    int big = 0, low = 0;
+
+    if((*x > *y)){
+        big = *x;
+        low = *y;
+        printf("\nThe highest value is %d with the adress %x\n\nThe lowest value is %d with de adress %x\n", big, x, low, y);
+    }
+    else if((*x == *y)){
+        printf("\nThe data at the adress %x and %x are equals.\n", x,y);
+    }
+    else{
+        big = *y;
+        low = *x;
+        printf("\nThe highest value is %d with the adress %x\n\nThe lowest value is %d with de adress %x\n", big, y, low, x);
+    }
+}
+
+
+int main(){
+    int a = 0, b = 0;
+    int *x;
+    int *y;
+
+    printf("\nEnter two integer values: ");
+    scanf("%d%d", &a, &b);
+
+    x = &a;
+    y = &b;
+
+    m_size(x,y);
+
+    return 0;
+}
+
+=================================================================================================================================================================
+/*6.Elaborar um programa que leia dois valores inteiros (A e B). Em seguida faca uma funcao que retorne a soma do dobro dos dois numeros lidos. 
+A funcao devera armazenar o dobro de A na propria variavel A e o dobro de B na propria variavel B. */
 	
+
+
