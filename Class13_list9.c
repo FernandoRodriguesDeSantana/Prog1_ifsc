@@ -286,6 +286,23 @@ int main(){
 =================================================================================================================================================================
 /*10.Crie um programa que contenha um array de inteiros contendo 5 elementos. Utilizando apenas aritmetica de ponteiros, leia esse
 array do teclado e imprima o dobro de cada valor lido.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n[5] = {1,2,3,4,5}, u;
+    int *i;
+
+    for(u = 0; u < 5; u++){
+        i = &n[u];
+        printf("\nThe element value is %d and your adress is %x.\n", n[u], i);
+    }
+
+    return 0;
+}
+=================================================================================================================================================================
+/*11.Crie um programa que contenha um array contendo 5 elementos inteiros. Leia esse array do teclado e imprima o endereco 
+das posicoes contendo valores pares.*/
 
 
 
