@@ -250,4 +250,33 @@ int main(){
     
     return 0;
 }
+=================================================================================================================================================================
+/*Crie um programa que contenha uma matriz de float contendo 3 linhas e 3 colunas. Imprima o endereco de cada posicao dessa matriz.*/ 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    float matrix[3][3] = {1,2,3,4,5,6,7,8,9};
+    int i,j;
+    float *x[3][3];
+    float *y;
+
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            x[i][j] = &matrix[i][j];
+        }
+    }
+    for(i = 0; i < 3; i++){
+        printf("\n");
+        for(j = 0; j < 3; j++){
+            printf(" %x ", x[i][j]);
+        }
+    }
+    return 0;
+}
+=================================================================================================================================================================
+/*10.Crie um programa que contenha um array de inteiros contendo 5 elementos. Utilizando apenas aritmetica de ponteiros, leia esse
+array do teclado e imprima o dobro de cada valor lido.*/
+
+
 
