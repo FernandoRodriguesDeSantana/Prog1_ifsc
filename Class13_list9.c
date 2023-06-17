@@ -303,6 +303,33 @@ int main(){
 =================================================================================================================================================================
 /*11.Crie um programa que contenha um array contendo 5 elementos inteiros. Leia esse array do teclado e imprima o endereco 
 das posicoes contendo valores pares.*/
+#include <stdio.h>
+#include <stdlib.h>
 
+int main(){
+    int n[5], m[5], i, *j;
+    printf("Enter 5 integer numbers: ");
+    for(i = 0; i < 5; i++){
+        scanf("%d", &n[i]);
+        j = &n[i];
+        m[i] = j;
+    }
+    printf("\nThe inserted array are: n = {");
+    for(i = 0; i < 5; i++){
+        printf(" %d ", n[i]);
+    }
+    printf("}\n");
 
+    printf("\nThe addresses of the inserted array elements are: n = {");
+    for(i = 0; i < 5; i++){
+        printf(" %x ", m[i]);
+    }
+    printf("}\n");
+	
+    return 0;
+}
+=================================================================================================================================================================
+/*12Faca um programa que leia tres valores inteiros e chame uma funcao que receba estes 3 valores de entrada e retorne eles ordenados, 
+ou seja, o menor valor na primeira variavel, o segundo menor valor na variavel do meio, e o maior valor na ultima variavel. A funcao
+deve retornar o valor 1 se os tres valores forem iguais e 0 se existirem valores diferentes. Exibir os valores ordenados na tela.*/
 
