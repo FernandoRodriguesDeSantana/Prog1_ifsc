@@ -332,4 +332,60 @@ int main(){
 /*12Faca um programa que leia tres valores inteiros e chame uma funcao que receba estes 3 valores de entrada e retorne eles ordenados, 
 ou seja, o menor valor na primeira variavel, o segundo menor valor na variavel do meio, e o maior valor na ultima variavel. A funcao
 deve retornar o valor 1 se os tres valores forem iguais e 0 se existirem valores diferentes. Exibir os valores ordenados na tela.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int order(int a, int b, int c){
+    int *i, *j, *k, high = 0, low =0, neutral = 0;
+    i = &a;
+    j = &b;
+    k = &c;
+
+    //testing the scanf using pointers
+    printf("\n'a' variable: adress %x and value %d", i, *i);
+    printf("\n'b' variable: adress %x and value %d", j, *j);
+    printf("\n'c' variable: adress %x and value %d\n", k, *k);
+   
+    if((*i > *j) && (*j > *k)){
+        high = i;
+        neutral = j;
+        low = k;
+    }
+    else if((*i > *j) && (*j < *k)){
+        high = i;
+        neutral = k;
+        low = j;
+    }
+    else if((*i < *j) && (*j < *k)){
+        high = k;
+        neutral = j;
+        low = i;
+    }
+    else if((*i < *j) && (*j > *k) && (*k > *i)){
+        high = j;
+        neutral = k;
+        low = i;
+    }
+    else if((*i < *j) && (*j > *k) && (*k < *i)){
+        high = j;
+        neutral = i;
+        low = k;
+    }
+    else if(())
+}
+
+
+int main(){
+    int a, b, c;
+
+    printf("\nEnter three integer numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+    
+    order(a,b,c);
+
+    return 0;
+}
+=================================================================================================================================================================
+/*13.Elabore uma funcao que receba duas strings como parametros e verifique se a segunda string ocorre dentro da primeira. Use aritmetica de ponteiros para acessar
+os caracteres das strings.*/
 
